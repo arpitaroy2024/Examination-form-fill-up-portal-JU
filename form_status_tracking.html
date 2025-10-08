@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Form Status - JU Exam Portal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 40px 0;
+      font-family: system-ui, sans-serif;
+    }
+
+    .track-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .track-card {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    }
+
+    .track-header {
+      background: #1e5128;
+      color: white;
+      padding: 30px;
+      text-align: center;
+      border-radius: 15px 15px 0 0;
+    }
+
+    .workflow-container {
+      padding: 40px;
+      background: #f8f9fa;
+    }
+
+    .workflow-step {
+      position: relative;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-left: 4px solid #dee2e6;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      display: flex;
+      align-items: center;
+    }
+
+    .workflow-step.completed { border-left-color: #28a745; }
+    .workflow-step.pending { border-left-color: #ffc107; }
+    .workflow-step.rejected { border-left-color: #dc3545; }
+    .workflow-step.not-started { border-left-color: #6c757d; opacity: 0.6; }
+
+    .step-icon { font-size: 2rem; margin-right: 15px; }
+    .step-title { font-weight: 600; margin-bottom: 5px; }
+    .step-date { font-size: 0.9rem; color: #6c757d; }
+
+    .search-box { max-width: 600px; margin: 0 auto 40px; }
+  </style>
+</head>
+<body>
+  <div class="track-container">
+
+    <div class="text-center mb-4">
+      <a href="index.html" class="btn btn-outline-light">
+        <i class="fas fa-home"></i> Back to Home
+      </a>
+    </div>
+
+    <!-- Search Box -->
+    <div class="card track-card mb-4">
+      <div class="card-body p-4">
+        <h4 class="text-center mb-4"><i class="fas fa-search"></i> Track Your Form Status</h4>
+        <form class="search-box">
+          <div class="input-group input-group-lg">
+            <input type="text" class="form-control" placeholder="Enter Registration Number (e.g., 220447)" required>
+            <button class="btn btn-primary" type="submit">
+              <i class="fas fa-search"></i> Search
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Status Display (Demo) -->
+    <div class="card track-card">
+      <div class="track-header">
+        <h3><i class="fas fa-file-alt"></i> Form Status</h3>
+        <p class="mb-0">Arpita Roy (220466)</p>
+      </div>
+
+      <div class="card-body p-4 workflow-container">
+        <!-- Step 1 -->
+        <div class="workflow-step completed">
+          <i class="fas fa-user-check step-icon text-success"></i>
+          <div>
+            <div class="step-title">Chairman Approval</div>
+            <div class="step-date">Approved on 2025-10-05</div>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="workflow-step pending">
+          <i class="fas fa-user-clock step-icon text-warning"></i>
+          <div>
+            <div class="step-title">Provost Approval</div>
+            <div class="step-date">Pending</div>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="workflow-step not-started">
+          <i class="fas fa-user-times step-icon text-secondary"></i>
+          <div>
+            <div class="step-title">Accountant Approval</div>
+            <div class="step-date">Not started</div>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="workflow-step not-started">
+          <i class="fas fa-user-times step-icon text-secondary"></i>
+          <div>
+            <div class="step-title">Registrar Approval</div>
+            <div class="step-date">Not started</div>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="workflow-step not-started">
+          <i class="fas fa-user-times step-icon text-secondary"></i>
+          <div>
+            <div class="step-title">Controller Approval</div>
+            <div class="step-date">Not started</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
