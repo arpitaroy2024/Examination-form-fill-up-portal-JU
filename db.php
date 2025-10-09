@@ -2,10 +2,11 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$db = "Examination-form-fill-up-portal-JU";
+$db = "exam_portal";
 
 $conn = new mysqli($host, $user, $pass, $db);
 if($conn->connect_error){
     die("Database Connection Failed: " . $conn->connect_error);
 }
 ?>
+
