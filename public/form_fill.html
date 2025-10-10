@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exam Form Fill-up - Jahangirnagar University</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f1f8e9;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #2e7d32;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 30px auto;
+      background: white;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px gray;
+    }
+
+    h2 {
+      text-align: center;
+      color: #2e7d32;
+    }
+
+    form label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      margin-top: 15px;
+      background-color: #2e7d32;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #1b5e20;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Jahangirnagar University</h1>
+    <p>Exam Form Fill-up Portal</p>
+  </header>
+
+  <div class="container">
+    <h2>Exam Form Fill-up</h2>
+   <form action="form_fill.php" method="POST">
+  <label>Student Name</label>
+  <input type="text" name="name" placeholder="Enter your full name" required>
+
+  <label>Roll Number</label>
+  <input type="text" name="roll" placeholder="Enter roll number" required>
+
+  <label>Registration Number</label>
+  <input type="text" name="reg" placeholder="Enter registration number" required>
+
+  <label>Session</label>
+  <input type="text" name="session" placeholder="e.g. 2020-21" required>
+
+  <label>Department</label>
+  <select name="dept" required>
+    <option value="">Select Department</option>
+    <option>Computer Science and Engineering</option>
+    <option>Physics</option>
+    <option>Chemistry</option>
+    <option>Mathematics</option>
+    <option>Statistics</option>
+  </select>
+
+  <label>Semester</label>
+  <select name="semester" required>
+    <option value="">Select Semester</option>
+    <option>1st Semester</option>
+    <option>2nd Semester</option>
+    <option>3rd Semester</option>
+    <option>4th Semester</option>
+    <option>5th Semester</option>
+    <option>6th Semester</option>
+    <option>7th Semester</option>
+    <option>8th Semester</option>
+  </select>
+
+  <label>Courses</label>
+  <textarea name="courses" rows="3" placeholder="List your course codes separated by commas" required></textarea>
+
+  <label>Exam Center</label>
+  <input type="text" name="center" placeholder="Enter exam center" required>
+
+  <button type="submit">Submit Form</button>
+</form>
+
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Jahangirnagar University | Exam Automation System
+  </div>
+
+</body>
+</html>
